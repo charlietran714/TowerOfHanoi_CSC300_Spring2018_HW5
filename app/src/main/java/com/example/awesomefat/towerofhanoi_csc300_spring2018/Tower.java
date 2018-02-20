@@ -1,5 +1,8 @@
 package com.example.awesomefat.towerofhanoi_csc300_spring2018;
 
+import android.view.View;
+import android.view.ViewGroup;
+
 /**
  * Created by awesomefat on 2/15/18.
  */
@@ -7,7 +10,7 @@ package com.example.awesomefat.towerofhanoi_csc300_spring2018;
 public class Tower
 {
     private Disk top;
-
+    private ViewGroup theViewGroup;
     public Tower()
     {
         this.top = null;
@@ -43,4 +46,19 @@ public class Tower
         }
         return disk2Remove;
     }
+    public void display()
+    {
+        if(this.top == null)
+        {
+            System.out.println(this.top + "");
+        }
+        else
+        {
+            this.top.display();
+            System.out.println("");
+        }
+    }
+
+
+
 }

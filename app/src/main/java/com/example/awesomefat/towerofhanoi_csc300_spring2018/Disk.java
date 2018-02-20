@@ -14,16 +14,27 @@ public class Disk
         this.size = size;
         this.nextDisk = null;
     }
-
-    public int getSize() {
+    public void display()
+    {
+        System.out.println(this.size);
+        if(this.nextDisk != null)
+        {
+            this.nextDisk.display();
+        }
+    }
+    public int getSize()
+    {
         return size;
     }
 
-    public Disk getNextDisk() {
+    public Disk getNextDisk()
+    {
         return nextDisk;
     }
 
-    public void setNextDisk(Disk nextDisk) {
+    public void setNextDisk(Disk nextDisk)
+    {
         this.nextDisk = nextDisk;
     }
+
 }
